@@ -1,0 +1,15 @@
+<div class="row bg-light">
+  <div class="d-flex align-items-center justify-content-end w-100 pt-2 pb-2" *ngIf="userProfile$ | async as
+  userProfile">
+    <div class="mr-2">
+      <img class="user-photo" [src]="userProfile.photoURL">
+    </div>
+    <div class="mr-2">
+      {{ userProfile.displayName }}
+    </div>
+    <div class="mr-2">
+      <button class="btn btn-primary" (click)="signOut()">Sign Out</button>
+    </div>
+  </div>
+</div>
+
